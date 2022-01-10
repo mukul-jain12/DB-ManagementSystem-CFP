@@ -235,6 +235,7 @@ CREATE TABLE lab(
 	PRIMARY KEY (id)
 ) ;
 
+
 CREATE TABLE lab_threshold(
 	id INT NOT NULL,
 	lab_id INT NOT NULL,
@@ -351,20 +352,3 @@ CREATE TABLE company_requirement(
 	CONSTRAINT `FK_company_id` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`),
 	PRIMARY KEY(id)
 );
-
-
-CREATE TABLE candidate_techstack_assignment(
-	id INT NOT NULL,
-	requirement_id INT NOT NULL,
-	candidate_id INT NOT NULL,
-	assign_date DATETIME DEFAULT NULL,
-	status VARCHAR(20) DEFAULT NULL,
-	creator_stamp DATETIME DEFAULT NULL,
-	creator_user INT DEFAULT NULL,
-	KEY `FK_company_requirement_id` (`requirement_id`),
-	CONSTRAINT `FK_company_requirement_id` FOREIGN KEY (`requirement_id`) REFERENCES `company_requirement` (`id`),
-	KEY `FK_candidate_id` (`candidate_id`),
-	CONSTRAINT `FK_candidate_id` FOREIGN KEY (`candidate_id`) REFERENCES `fellowship_candidate` (`id`),
-	PRIMARY KEY (id)
-) ;
-
