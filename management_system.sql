@@ -60,7 +60,7 @@ CREATE TABLE fellowship_candidate(
 	PRIMARY KEY(id)
 );
 
-drop table candidate_personal_details_check;
+
 CREATE TABLE candidate_personal_details_check(
 	id INT NOT NULL,
 	candidate_id INT NOT NULL,
