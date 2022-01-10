@@ -47,4 +47,3 @@ INSERT INTO company VALUES
 	(4, 'Accenture', 'City Center', 'Banglore', 1, NULL, 1),
 	(5, 'LTI', 'Navi mumbai', 'Mumbai', 1, NULL, 1)
 ;
-;
