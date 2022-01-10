@@ -39,3 +39,12 @@ INSERT INTO candidate_documents VALUES
 	(4, 4, 'type of doc 4', 'path of doc 4', 1, NULL, 1),
 	(5, 5, 'type of doc 5', 'path of doc 5', 1, NULL, 1)
 ;
+
+INSERT INTO company VALUES 
+	(1, 'EasyRewardz', 'Rudra Complex, Near Railway Station','Gurgaon', 1, NULL, 1),
+	(2, 'KPMG', 'City Center', 'Banglore', 1, NULL, 1),
+	(3, 'PWC', 'City Center', 'Banglore', 1, NULL, 1),
+	(4, 'Accenture', 'City Center', 'Banglore', 1, NULL, 1),
+	(5, 'LTI', 'Navi mumbai', 'Mumbai', 1, NULL, 1)
+;
+;

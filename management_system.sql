@@ -157,7 +157,7 @@ CREATE TABLE user_roles (
 
 CREATE TABLE company(
 	id INT NOT NULL,
-	name INT NOT NULL,
+	name VARCHAR(300) NOT NULL,
 	address VARCHAR(150) DEFAULT NULL,
 	location VARCHAR(50) DEFAULT NULL,
 	status INT DEFAULT 1,
