@@ -17,7 +17,11 @@ DELIMITER $$
 	END$$
 DELIMITER ;
 
-UPDATE user_details SET password = 'Mukul@123' WHERE id = 1;
+UPDATE user_details 
+SET 
+    password = 'Mukul@123'
+WHERE
+    id = 1;
 
 
 /*
@@ -39,4 +43,6 @@ DELIMITER ;
 
 drop trigger after_delete_company_row;
 
-delete from company where name='KPMG';
+DELETE FROM company 
+WHERE
+    name = 'KPMG';
