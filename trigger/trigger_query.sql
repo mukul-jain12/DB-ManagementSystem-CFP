@@ -6,7 +6,7 @@ DELIMITER $$
 	BEFORE UPDATE ON user_details FOR EACH ROW
 	BEGIN
 		DECLARE error_message1 VARCHAR(600);
-        DECLARE error_message2 VARCHAR(600);
+		DECLARE error_message2 VARCHAR(600);
 		SET error_message1=('Password is Empty.');
 		SET error_message2=('New Password Should Be Defferent From New Password.');
 			IF
