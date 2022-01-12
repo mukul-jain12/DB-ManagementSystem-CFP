@@ -12,7 +12,7 @@ BEGIN
 END$$
 DELIMITER ;
 
-SELECT calculate_age(1);
+SELECT CALCULATE_AGE(1);
 
 /*
 	2. Get the full name of the candidate by candidate_id.
@@ -28,7 +28,7 @@ BEGIN
 END$$
 DELIMITER ;
 
-SELECT full_name(1);
+SELECT FULL_NAME(1);
 
 /*
 	3. Take cpu percent and use case to print cpu percent is high when > 80,  normal<80 and else low.
@@ -40,13 +40,13 @@ DETERMINISTIC
 BEGIN
 	CASE
 		WHEN cpu_percent > 80 THEN  RETURN 'CPU Percent is High';
-        WHEN cpu_percent < 80 THEN RETURN 'CPU Percent is Normal';
-        ELSE RETURN 'LOW';
+		WHEN cpu_percent < 80 THEN RETURN 'CPU Percent is Normal';
+		ELSE RETURN 'LOW';
 	END CASE;
 END$$
 DELIMITER ;
 
-SELECT cpu_percent_check(90);
+SELECT CPU_PERCENT_CHECK(90);
 
 /*
 	4. Get company count by location.
@@ -62,4 +62,4 @@ BEGIN
 END$$
 DELIMITER ;
 
-SELECT company_name('Banglore');
+SELECT COMPANY_NAME('Banglore');

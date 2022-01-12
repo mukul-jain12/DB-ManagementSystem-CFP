@@ -28,7 +28,8 @@ DELIMITER $$
 	AFTER DELETE ON company FOR EACH ROW
 	BEGIN
  			 IF
-  				EXISTS(SELECT * from company_trash) THEN INSERT INTO company_trash(company_name, date_deleted) VALUES(old.name, localtime());
+  				EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'company_trash') 
+					THEN INSERT INTO company_trash(company_name, date_deleted) VALUES(old.name, localtime());
   			ELSE
 				CREATE TABLE IF NOT EXISTS company_trash(company_name VARCHAR(60) NOT NULL, date_deleted DATE NOT NULL);
 				INSERT INTO company_trash(company_name, date_deleted) VALUES(old.name, localtime());
