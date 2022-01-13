@@ -18,5 +18,5 @@ LEFT JOIN user_details AS ud ON fc.first_name = ud.first_name;
 /*
 	3. Do one on self join.
 */
-SELECT fc1.first_name, fc1.last_name, fc2.email_id, fc2.degree FROM fellowship_candidate fc1, fellowship_candidate fc2 
-WHERE fc1.id = fc2.id;
+SELECT fc1.first_name, fc1.hired_city FROM fellowship_candidate fc1, fellowship_candidate fc2 
+WHERE fc1.hired_city = fc2.hired_city;

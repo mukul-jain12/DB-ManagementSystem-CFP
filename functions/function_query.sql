@@ -28,7 +28,7 @@ BEGIN
 END$$
 DELIMITER ;
 
-SELECT FULL_NAME(1);
+SELECT FULL_NAME(8);
 
 /*
 	3. Take cpu percent and use case to print cpu percent is high when > 80,  normal<80 and else low.
@@ -53,13 +53,13 @@ SELECT CPU_PERCENT_CHECK(90);
 */
 DELIMITER $$
 CREATE FUNCTION company_name(location_name VARCHAR(50))
-RETURNS VARCHAR(50)
+RETURNS INT
 DETERMINISTIC
 BEGIN
-	DECLARE count_company VARCHAR(50);
+	DECLARE count_company INT;
 		SELECT COUNT(location) INTO count_company FROM company WHERE location = location_name;
 	RETURN count_company;
 END$$
 DELIMITER ;
-
+drop function company_name;
 SELECT COMPANY_NAME('Banglore');
