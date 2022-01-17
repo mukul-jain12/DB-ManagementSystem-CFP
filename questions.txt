@@ -46,4 +46,15 @@ For all create a hired candidate table separately
 1. By Range:- do partitioning on basis of hired_date
 2. By list - take pincode for partitioning
 3. By key :- you can take any column or 0 columns but partition number must be greater than 2
-4. by Column:- do partitioning using both degree and pincode  
+4. by Column:- do partitioning using both degree and pincode
+
+
+## Sub-Partition :-
+1. Create a table log_subpart with attributes like user_name varchar(24), technology varchar(24), disc_write_count int
+2. Partition by range and subpartition by hash on disc_write_count
+
+
+## Transaction :-
+Create a stored procedure for both and define error handlers and do rollback inside them
+
+1. modify the password column to default value and then insert a user with no password specified and then do select *
