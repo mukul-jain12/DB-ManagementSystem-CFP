@@ -1,37 +1,49 @@
-view
+## View :-
 1. create view for selecting student name and its company name he is assigned to
 2. list candidates personal info whose education check has been verified
 3. select all details from the maker plan
 
 
-Functions:-
+## Functions :-
 1. create a function to calculate age from DOB of candidate
 2. Get the full name of the candidate by candidate_id
 3. Take cpu percent and use case to print cpu percent is high when > 80,  normal<80 and else low
 4. Get company count by location
 
 
-Triggers
+## Triggers :-
 1. To update valid password, trigger will be invoked before update to check the new value of password if its empty sql error message will be singled.
 2. Delete Trigger:- After deleting a row from company table, trigger will be invoked to insert the company name and date_deleted in another table named as company_trash.
 
 
-Joins:-
+## Joins :-
 1. Select mentor details and its tech name using inner join
 2. select first name, last name ,password and contact number by doing outer join on candidate_fellowship and user_details table
 3. do one on self join
 
 
-Stored Procedure
+## Stored Procedure :-
 1. Define handler inside procedure to handle sql exception and sql warning by doing select query in which get_full_name function will be called
 2. Define handler inside procedure to handle sql exception and sql warning  by doing select query to call the views inside the procedure and do rollback inside the handler and show error message.
 
 
-Cursors
+## Cursors :-
 1. Define a stored procedure to get a list of company names from the company table using cursor
 2. define a procedure to get a list of distinct email-ids from the cpu log table with with technology=android
 
 
-Index
+## Index :-
 1. first do explain with select to get username m from cpu logs where techonology="andriod"
 2. then create a index on technology column and do the above query again 
+
+
+## Partitions :-
+1. create the table with partitions defined.
+2. Insert rows to the table.
+3. Run a select query by fetching rows from a particular column.
+
+For all create a hired candidate table separately
+1. By Range:- do partitioning on basis of hired_date
+2. By list - take pincode for partitioning
+3. By key :- you can take any column or 0 columns but partition number must be greater than 2
+4. by Column:- do partitioning using both degree and pincode  
