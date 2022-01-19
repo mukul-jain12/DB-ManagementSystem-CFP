@@ -29,3 +29,13 @@ Database changed
 C:\Program Files\MySQL\MySQL Server 8.0\bin>mysqldump -u root -p management_system fellowship_candidate > F:\CFP\Database_Management\db_backup\management_system_fc
 _2022.sql
 Enter password: **********
+
+
+//Snapshot
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysqldump management_system --master-data > dbdump.db
+mysqldump: Got error: 1045: Access denied for user 'ODBC'@'localhost' (using password: NO) when trying to connect
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysqldump -u root -p management_system --master-data > dbdump.db
+Enter password: **********
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>m
