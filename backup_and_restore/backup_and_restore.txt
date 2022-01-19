@@ -1,0 +1,31 @@
+// Backup the database
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysqldump -u root -p management_system > F:\CFP\Database_Management\db_backup\management_system_2022.sql
+Enter password: **********
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p
+Enter password: **********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+
+mysql> drop database management_system;
+Query OK, 3 rows affected (1.27 sec)
+
+mysql> create database management_system;
+Query OK, 1 row affected (0.14 sec)
+
+
+// Restoring the Database
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p management_system < F:\CFP\Database_Management\db_backup\management_system_2022.sql
+Enter password: **********
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p
+Enter password: **********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+
+mysql> use management_system;
+Database changed
+
+
+// Backup the database for particular table
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysqldump -u root -p management_system fellowship_candidate > F:\CFP\Database_Management\db_backup\management_system_fc
+_2022.sql
+Enter password: **********

@@ -57,4 +57,5 @@ For all create a hired candidate table separately
 ## Transaction :-
 Create a stored procedure for both and define error handlers and do rollback inside them
 
-1. modify the password column to default value and then insert a user with no password specified and then do select *
+1. Modify the password column to default value and then insert a user with no password specified and then do select *.
+2. Insert new company and do insert in all other tables which are interlinked to this.
